@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun openPlayStore() {
         val url: String =
-            "https://play.google.com/store/apps/details?id=resource.br.com.tribanco.SuperCompras&hl=pt_BR&gl=US"
+            "https://play.google.com/store/apps/details?id=" //url do app na playstore
         //necessario o manifest: <uses-permission android:name="android.permission.INTERNET" />
         val intent = Intent(Intent.ACTION_VIEW)
         intent.setData(Uri.parse(url))
