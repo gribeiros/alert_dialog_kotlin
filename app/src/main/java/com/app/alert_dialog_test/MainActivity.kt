@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         showCustomDialogBox()
     }
 
-    //função para mostrar o banner chamar
+    //função para mostrar o banner
     private fun showCustomDialogBox() {
         val dialog = Dialog(this)
 
