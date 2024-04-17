@@ -38,7 +38,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnAttNow.setOnClickListener {
-        openPlayStore()
+            dialog.dismiss()
+            openPlayStore()
         }
 
         //variavel para verificar o retorno da api e mostrar o dialogo
@@ -58,9 +59,10 @@ class MainActivity : AppCompatActivity() {
         return resp
     }
 
-    private fun openPlayStore(){
-        val url:String = "https://play.google.com/store/apps/details?id=resource.br.com.tribanco.SuperCompras&hl=pt_BR&gl=US"
-    //necessario o manifest: <uses-permission android:name="android.permission.INTERNET" />
+    private fun openPlayStore() {
+        val url: String =
+            "https://play.google.com/store/apps/details?id=resource.br.com.tribanco.SuperCompras&hl=pt_BR&gl=US"
+        //necessario o manifest: <uses-permission android:name="android.permission.INTERNET" />
         val intent = Intent(Intent.ACTION_VIEW)
         intent.setData(Uri.parse(url))
 
